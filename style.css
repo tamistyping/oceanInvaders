@@ -1,0 +1,10 @@
+.wrapper {
+    height: 600px;
+    width: 500px;
+    background: url('background.png');
+    border: 5px rgb(8, 11, 11) solid;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
