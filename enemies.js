@@ -62,11 +62,15 @@ function checkIfAlive(){
 
                 if (!enemy.alive) {
                     enemiesArr.splice(enemyIndex, 1)
+                    score += 10
                 }
             }
         })
     })
-}
+    if (enemiesArr.length === 0){
+        resetGame()
+        gameState = "start"
+    }}
 
 function resetGame(){
     bombsArr = []
@@ -74,6 +78,7 @@ function resetGame(){
     bulletsArr = []
 
     initializeEnemies()
+    gameState = "start"
 }
 
 function checkBombCollision(){
@@ -112,7 +117,6 @@ class Bomb {
         }
     }
 }
-
 
 
 

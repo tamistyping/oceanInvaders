@@ -4,11 +4,12 @@ canvas.width = 500
 canvas.height = 600
 
 // Global Variables
+let gameState = "start"
 let keys = []
 let score = 0
 let lives = 3
 let bulletsArr = []
-
+let randomNum = 0
 const submarine = new Image()
 submarine.src = 'mySubSprite.png'
 
