@@ -27,6 +27,7 @@ function animate(){
         ctx.font = "30px Arial"
         ctx.fillStyle = "white"
         ctx.fillText("Press Enter to Start", canvas.width/2 - 130, canvas.height/2)
+        resetGame()
     }
 }
 animate()
@@ -37,6 +38,7 @@ window.addEventListener('keydown', function(e){
     if (e.keyCode === 13){
         if(gameState === "start"){
             gameState = "playing"
+            score = 0
             animate()
         }
     }

@@ -44,7 +44,7 @@ function initializeEnemies(){
     for (let i=0; i < numberOfEnemies; i++){
         const enemy = new Enemies(i * 70 + 20)
         enemiesArr.push(enemy)
-    }
+    }      
 }
 initializeEnemies()
 
@@ -68,8 +68,8 @@ function checkIfAlive(){
         })
     })
     if (enemiesArr.length === 0){
+        console.log('sss')
         resetGame()
-        gameState = "start"
     }}
 
 function resetGame(){
@@ -78,6 +78,7 @@ function resetGame(){
     bulletsArr = []
 
     initializeEnemies()
+    score = 0
     gameState = "start"
 }
 
@@ -89,6 +90,7 @@ function checkBombCollision(){
             bomb.y <= sub.y + sub.height &&
             bomb.y >= sub.y
         ){
+            console.log('calling resetgame')
             resetGame()
         }
     })
